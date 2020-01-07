@@ -323,7 +323,7 @@ int main(int cpu_num, char **arv)
 {
 	unsigned int addr;
 	int led_id = 36;
-
+    int led_id2 = 37;
 	if (cpu_num == 0) {
 		/* clock gating, sys-manager init */
 		clk_gating_init();
@@ -339,7 +339,7 @@ int main(int cpu_num, char **arv)
 
 		/* set led on */
 		do_led(led_id, LED_ON);
-
+		do_led(led_id2, LED_ON);
 		printf("SiFlower SFAX8 Bootloader (%s - %s)\n",
 							   __DATE__, __TIME__);
 
